@@ -1,0 +1,9 @@
+.intro {
+  grid-column: span 3;
+  grid-row: span 3;
+  padding: 40px 20px 20px 20px;
+  color: #333;
+  font-family: "Josefin Sans", sans-serif;
+  background: #ededed;
+  border-radius: 0 100px 0 0;
+}
