@@ -19,36 +19,39 @@ class Nav extends Component {
 
   render() {
     return (
-      <div className={`nav ${this.state.isMenuOpen ? "nav--open" : ""}`}>
-        <div className="nav__title">
-          <h1>IRMAN.io</h1>
-          <h2>Developer portfolio</h2>
-        </div>
-        <div className="nav__right">
-          <div className="nav__hamburger" onClick={this.toggleMenu}>
-            <div className="nav__ham1" />
-            <div className="nav__ham2" />
-            <div className="nav__ham3" />
+      <nav className={`${this.state.isMenuOpen ? "nav--open" : ""}`}>
+        <div className="nav-wrapper">
+          <div className="nav__title">
+            <h1>Irman.io</h1>
+            <h2>Developer portfolio</h2>
+          </div>
+          <div className="nav__right">
+            <h2>Developer portfolio</h2>
+            <div className="nav__hamburger" onClick={this.toggleMenu}>
+              <div className="nav__ham1" />
+              <div className="nav__ham2" />
+              <div className="nav__ham3" />
+            </div>
+          </div>
+          <div className="nav__menu">
+            <div className="nav__close" onClick={this.toggleMenu}>
+              <div className="nav__x1" />
+              <div className="nav__x2" />
+            </div>
+            <ul>
+              <li>
+                <a href="">About</a>
+              </li>
+              <li>
+                <a href="">Projects</a>
+              </li>
+              <li>
+                <a href="">Contact</a>
+              </li>
+            </ul>
           </div>
         </div>
-        <div className="nav__menu">
-          <div className="nav__close" onClick={this.toggleMenu}>
-            <div className="nav__x1" />
-            <div className="nav__x2" />
-          </div>
-          <ul>
-            <li>
-              <a href="">Home</a>
-            </li>
-            <li>
-              <a href="">Projects</a>
-            </li>
-            <li>
-              <a href="">About</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      </nav>
     );
   }
 }

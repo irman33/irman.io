@@ -1,4 +1,20 @@
 .tile {
   color: #ffffff;
-  border-radius: 2px;
+  /* border-radius: 5px; */
+}
+
+.info-box {
+  position: relative;
+
+  background: rgba(0, 0, 0, 0.3);
+  /* background: rgba(208, 34, 27, 0.3); */
+  /* width: calc(100% - 4px); */
+  /* height: calc(50% - 1px); */
+  margin: 0 auto;
+  padding: 20px;
+  width: calc(100% - 40px);
+  height: calc(60% - 40px);
+  /* border: solid white 2px; */
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }

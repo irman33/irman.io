@@ -1,8 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css?family=Amatic+SC|Andika|Josefin+Sans"); */
-
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #000000;
-  font-family: "Amatic SC", sans-serif;
+* {
+  /* box-sizing: border-box; */
 }

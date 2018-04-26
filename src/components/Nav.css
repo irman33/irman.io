@@ -1,48 +1,83 @@
-.nav {
-  display: flex;
+nav {
   margin: 0 auto;
-  max-width: 1200px;
-  margin-bottom: 80px;
+  width: 100%;
+  /* background: var(--main-bg-color); */
+  font-family: "Amatic SC", sans-serif;
 }
 
-.nav h1 {
+.nav-wrapper {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+.nav__title {
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+  background-color: var(--action-color);
+}
+
+.nav__title h1 {
+  display: block;
   margin: 0;
   padding: 0px 10px;
   font-size: 4em;
-  line-height: normal;
-  color: #ffffff;
-  background-color: #d0221b;
+  line-height: 1;
+  color: var(--contrast-color);
 }
 
-.nav h2 {
+.nav__title h2 {
+  position: absolute;
+  margin: 0;
+  top: 62px;
+  padding-left: 10px;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: var(--contrast-color);
+  /* opacity: 0.6; */
+  z-index: 10;
+  display: none;
+}
+.nav__right h2 {
+  display: block;
   margin: 0;
   padding-left: 10px;
   font-size: 1.5em;
-  font-weight: 800;
-  color: #ffffff;
-  opacity: 0.6;
-  position: absolute;
+  font-weight: 600;
+  color: var(--contrast-color);
+  z-index: 10;
 }
 
-.nav__title {
-  flex: 1;
-  background-image: none;
+.nav__right {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex: 3;
+  padding: 0;
 }
 
 .nav__menu {
+  position: relative;
   display: flex;
   justify-content: flex-end;
   flex: 3;
+  z-index: 1000;
 }
 
 .nav__menu ul {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 0;
   padding: 0;
 }
 
 .nav__menu li {
   display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
   list-style: none;
 }
 
@@ -50,32 +85,26 @@
   margin: 0px 20px;
   text-decoration: none;
   font-size: 2.5em;
-  color: #d0221b;
-  border-bottom: solid 5px #ffffff;
+  color: var(--contrast-color);
+  border-bottom: solid 0px #000000;
+  transition: all 0.3s;
 }
 
 .nav__menu li a:hover {
-  color: #ffffff;
-  border-bottom: solid 5px #d0221b;
-}
-
-.nav__right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-  flex: 3;
-  padding: 0 30px;
+  color: var(--contrast-color);
+  opacity: 1;
+  border-bottom: solid 5px black;
 }
 
 .nav__hamburger {
   display: none;
   flex-direction: column;
+  align-self: center;
   align-items: flex-end;
   justify-content: center;
-
   transition: all 0.4s cubic-bezier(0.25, 0.1, 0, 1.26);
   opacity: 1;
+  padding-right: 20px;
 }
 
 .nav__close {
@@ -87,7 +116,7 @@
 .nav__ham3 {
   width: 35px;
   height: 5px;
-  background-color: #d0221b;
+  background-color: var(--action-color);
   margin: 3px 0;
   border-radius: 0 5px 0 5px;
 }
@@ -99,23 +128,21 @@
   width: 30px;
 }
 
-.nav__x1 {
-  width: 40px;
+.nav__x1,
+.nav__x2 {
   height: 5px;
-  background-color: #d0221b;
+  background-color: var(--action-color);
   margin: 3px 0;
   border-radius: 0 5px 0 5px;
   transition: all 400ms ease 400ms;
   animation-delay: 1s;
 }
+
+.nav__x1 {
+  width: 40px;
+}
 .nav__x2 {
   width: 35px;
-  height: 5px;
-  background-color: #d0221b;
-  margin: 3px 0;
-  border-radius: 0 5px 0 5px;
-  animation-delay: 1s;
-  transition: all 400ms ease 400ms;
 }
 
 .nav--open .nav__x1 {
@@ -133,16 +160,10 @@
   padding: 30px;
 }
 
-@media all and (max-width: 580px) {
-  .nav__hamburger {
-    display: flex;
+@media all and (max-width: 680px) {
+  nav {
+    margin-bottom: 0;
   }
-
-  .nav--open .nav__hamburger {
-    transform: translateX(-100vw);
-    opacity: 0;
-  }
-
   .nav__menu {
     display: flex;
     flex-direction: row;
@@ -152,6 +173,29 @@
     right: -100vw;
     background: rgba(0, 0, 0, 0.8);
     transition: all 0.4s cubic-bezier(0.25, 0.1, 0, 1.26);
+  }
+
+  .nav__right {
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .nav__title h2 {
+    display: block;
+  }
+  .nav__right h2 {
+    display: none;
+  }
+
+  .nav__hamburger {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+  }
+
+  .nav--open .nav__hamburger {
+    transform: translateX(-100vw);
+    opacity: 0;
   }
 
   .nav__close {

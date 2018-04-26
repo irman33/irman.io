@@ -5,8 +5,8 @@ class SectionTitle extends Component {
   render() {
     return (
       <div className="section-title">
-        <h1>Projects</h1>
-        <div className="linebreak" />
+        <h2 className="break">{this.props.title}</h2>
+        {/* <div className="linebreak" /> */}
       </div>
     );
   }

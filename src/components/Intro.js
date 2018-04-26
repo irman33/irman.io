@@ -4,15 +4,18 @@ import "./Intro.css";
 class Intro extends Component {
   render() {
     return (
-      <div className="intro">
-        <h2>Lorem Ipsum Title</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam nibh.
-          Nunc varius facilisis eros. Sed erat. In in velit quis arcu ornare
-          laoreet. Curabitur adipiscing luctus massa. Integer ut purus ac augue
-          commodo commodo. Nunc nec mi eu justo tempor consectetuer.
-        </p>
-      </div>
+      <section className="section-intro">
+        <div className="intro__wrapper">
+          <div className="intro">
+            <h1>Lorem Ipsim Title</h1>
+            <h4>subtitle text here and here...</h4>
+            <h4 className="look-here">
+              ... some more lead text continued here.
+            </h4>
+            <button>Call to Action</button>
+          </div>
+        </div>
+      </section>
     );
   }
 }

@@ -1,16 +1,46 @@
+:root {
+  --main-red-color: #d0221b;
+
+  --main-bg-color: #000000;
+  --content-bg-color: #c5c9b3;
+  --action-color: #d0221b;
+  --contrast-color: #ffffff;
+
+  /* Olive Theme
+   --main-bg-color: #585e66;
+  --content-bg-color: #c5c9b3;
+  --action-color: #2e3747;
+  --contrast-color: #dbcfa7; 
+  
+  Intro:
+  background-color: var(--main-bg-color);
+  background: linear-gradient(
+    to bottom,
+    rgba(88, 94, 102, 1) 0%,
+    rgba(197, 201, 179, 1) 100%
+  );*/
+}
+
 html,
 body {
+  box-sizing: border-box;
   width: 100%;
+  /* font-family: "PT Sans Narrow", sans-serif; */
+  /* font-family: "Roboto Condensed", sans-serif; */
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background-color: var(--main-bg-color);
+  /* background-image: url("./img/7109.jpg"); */
 }
 
 .content {
   margin: 0 auto;
   max-width: 1200px;
-  min-height: 800px;
 }
 
-.header {
-  margin-bottom: 40px;
-  height: 80px;
-  background-color: #fff;
+#root {
+  margin: 0;
+  padding: 0;
 }

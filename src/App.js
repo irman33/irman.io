@@ -8,14 +8,12 @@ import SectionTitle from "./components/SectionTitle";
 class App extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Nav />
-        <div className="content">
-          <Intro />
-          <SectionTitle />
-          <Gallery />
-        </div>
-      </div>
+        <Intro />
+        <SectionTitle title="Projects" />
+        <Gallery />
+      </React.Fragment>
     );
   }
 }
